@@ -21,8 +21,8 @@
 var Role;
 (function (Role) {
     Role[Role["ADMIN"] = 5] = "ADMIN";
-    Role[Role["READ_ONLY"] = 6] = "READ_ONLY";
-    Role[Role["AUTHOR"] = 7] = "AUTHOR";
+    Role[Role["READ_ONLY"] = 100] = "READ_ONLY";
+    Role[Role["AUTHOR"] = 101] = "AUTHOR";
 })(Role || (Role = {}));
 var person = {
     name: 'yota',
@@ -32,4 +32,6 @@ var person = {
 };
 if (person.role === Role.ADMIN) {
     console.log("正解");
+    console.log(Role.READ_ONLY);
+    console.log(Role.AUTHOR);
 }

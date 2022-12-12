@@ -24,7 +24,7 @@
 
 enum Role{ //カスタム型と呼ばれる
     ADMIN = 5, //自動的に0が割り振り
-    READ_ONLY, //自動的に1
+    READ_ONLY = 100, //自動的に1
     AUTHOR,//自動的に2
 }
 
@@ -37,4 +37,6 @@ const person = {
 
 if(person.role === Role.ADMIN){
     console.log("正解");
+    console.log(Role.READ_ONLY);
+    console.log(Role.AUTHOR);
 }
