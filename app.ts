@@ -2,7 +2,7 @@ const person: {
     name: string;
     age: number;
 } = {
-    name: 'yota';
+    name: 'yota',
     age: 40,
 }
 
