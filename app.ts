@@ -1,42 +1,15 @@
-// const person: {
-//     name: string;
-//     age: number;
-// } 
-// const person: {
-//     name: string;
-//     age: number;
-//     hobbies: string[];
-//     role: [number, string];
-// } = {
-//     name: 'yota',
-//     age: 40,
-//     hobbies: ['Sports', 'Cooking'],
-//     role: [2, 'author'],
-// }
-
-// let favoriteActivities: string[];
-// favoriteActivities = ['Sports'];
-
-// for(const hobby of person.hobbies){
-//     console.log(hobby.toUpperCase());
-
-// }
-
-enum Role{ //カスタム型と呼ばれる
-    ADMIN = 5, //自動的に0が割り振り
-    READ_ONLY = 100, //自動的に1
-    AUTHOR,//自動的に2
+function combine(input1 : number | string, input2: number | string){
+    let result
+    if(typeof input1 === 'number' && typeof input2 === 'number'){
+       result = input1 + input2;
+    }else {
+        result = input1.toString() + input2.toString();
+    }
+    return result;
 }
 
-const person = {
-    name: 'yota',
-    age: 40,
-    hobbies: ['Sports', 'Cooking'],
-    role: Role.ADMIN,
-};
+const combinedAges = combine(30, 26);
+console.log(combinedAges);
 
-if(person.role === Role.ADMIN){
-    console.log("正解");
-    console.log(Role.READ_ONLY);
-    console.log(Role.AUTHOR);
-}
+const combinedNames = combine ('Max', 'Anna');
+console.log(combinedNames);
